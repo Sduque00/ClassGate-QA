@@ -1,0 +1,27 @@
+# Project orange
+*/.gradle/
+*/build/
+*/build/classes/java/main/
+*/build/classes/java/test/
+*/target/
+*/.idea/
+*/logs/
+*/out/
+*/history/
+.idea/
+*.scannerwork
+
+*.jar
+!reqres/gradle/wrapper/gradle-wrapper.jar
+
+!orangeHrm/gradle/wrapper/gradle-wrapper.jar
+!soap/gradle/wrapper/gradle-wrapper.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.class
+*.log
+*.ctxt
