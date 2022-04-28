@@ -14,6 +14,6 @@ Característica: Iniciar sesion
     Ejemplos:
       | username                 | password  |
       | administrativo@gmail.com | 123456789 |
-      | juan.maya@gmail.com       | 1017196584 |
+      #| juan.maya@gmail.com       | 1017196584 |
       #| acudiente@gmail.com      | 123456789 |
 

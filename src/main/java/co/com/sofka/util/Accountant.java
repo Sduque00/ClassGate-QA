@@ -1,6 +1,9 @@
 package co.com.sofka.util;
 
 import com.github.javafaker.Faker;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class Accountant {
@@ -10,9 +13,10 @@ public class Accountant {
     private String direccion;
     private String celular;
     private String identificacion;
+    private List<Student> hijos;
 
-    public Accountant() {
-        Faker falseador = new Faker(new Locale("es_CO"));
+    public Accountant(int numHijos) {
+        Faker falseador = new Faker(new Locale("en_US"));
         nombre = falseador.name().firstName();
         apellido = falseador.name().lastName();
         correo = falseador.name().username() + "@classgate.com";
@@ -20,6 +24,11 @@ public class Accountant {
         celular = String.valueOf(falseador.number().numberBetween(300, 354)) +
                 String.valueOf(falseador.number().numberBetween(0, 9999999));
         identificacion = "10" + falseador.numerify("########");
+
+        hijos = new ArrayList<Student>();
+        for(int i = 0; i<numHijos ; i++) {
+            hijos.add(new Student(apellido, identificacion));
+        }
     }
 
     public String getNombre() {
@@ -44,6 +53,10 @@ public class Accountant {
 
     public String getIdentificacion() {
         return identificacion;
+    }
+
+    public List<Student> getHijos() {
+        return hijos;
     }
 
     @Override

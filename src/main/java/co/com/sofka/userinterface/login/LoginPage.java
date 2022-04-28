@@ -19,9 +19,14 @@ public class LoginPage extends PageObject {
             .the("Submit")
             .located(xpath("//*[@id='root']/div[2]/form/button"));
 
+    public static final Target REGISTRAR_ACUDIENTE = Target
+            .the("RegistroAcudiente")
+            .locatedBy("//*[text()=' Registrarme como acudiente ']");
+
 
     //For validations.
     public static final Target LOGIN_VALIDATION= Target
             .the("Login_Validation")
             .locatedBy("//*[text()='{0}']");
 }
+

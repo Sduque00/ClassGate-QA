@@ -1,12 +1,26 @@
+co/com/sofka/question/acudiente/AcudienteQuestion.java
+ co.com.sofka.question.acudiente.AcudienteQuestion
+co/com/sofka/task/login/FillLogin.java
+ co.com.sofka.task.login.FillLogin
+co/com/sofka/userinterface/accountantregister/AccountantRegisterPage.java
+ co.com.sofka.userinterface.accountantregister.AccountantRegisterPage
+co/com/sofka/task/acudiente/FillAccountantRegisterForm.java
+ co.com.sofka.task.acudiente.FillAccountantRegisterForm
+co/com/sofka/task/acudiente/BrowseToAccountantRegister.java
+ co.com.sofka.task.acudiente.BrowseToAccountantRegister
 co/com/sofka/userinterface/login/LoginPage.java
  co.com.sofka.userinterface.login.LoginPage
 co/com/sofka/question/login/Login.java
  co.com.sofka.question.login.Login
-co/com/sofka/task/login/FillLogin.java
- co.com.sofka.task.login.FillLogin
 co/com/sofka/task/landingpage/OpenLandingPage.java
  co.com.sofka.task.landingpage.OpenLandingPage
 co/com/sofka/exception/ValidationTextDoNotMatch.java
  co.com.sofka.exception.ValidationTextDoNotMatch
+co/com/sofka/util/Accountant.java
+ co.com.sofka.util.Accountant
 co/com/sofka/userinterface/landingpage/LandingPage.java
  co.com.sofka.userinterface.landingpage.LandingPage
+co/com/sofka/util/Especialidades.java
+ co.com.sofka.util.Especialidades
+co/com/sofka/util/Teacher.java
+ co.com.sofka.util.Teacher
