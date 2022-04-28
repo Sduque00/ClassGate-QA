@@ -1,39 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Iniciar sesion" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-28T01:42:30" hostname="DESKTOP-M1Q9UOG" time="62.357">
+<testsuite name="Iniciar sesion" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-28T15:56:03" hostname="juan-Forward-Unto-Dawn" time="17.299">
   <properties/>
-  <testcase name="Inicio de sesion" classname="Iniciar sesion" time="22.988"/>
-  <testcase name="Inicio de sesion" classname="Iniciar sesion" time="20.889"/>
-  <testcase name="Inicio de sesion" classname="Iniciar sesion" time="18.48"/>
+  <testcase name="Inicio de sesion" classname="Iniciar sesion" time="9.002"/>
+  <testcase name="Inicio de sesion" classname="Iniciar sesion" time="8.297"/>
   <system-out><![CDATA[Step argument class io.cucumber.core.gherkin.vintage.GherkinVintageDataTableArgument
 Step argument class io.cucumber.core.gherkin.vintage.GherkinVintageDataTableArgument
-Step argument class io.cucumber.core.gherkin.vintage.GherkinVintageDataTableArgument
 ]]></system-out>
-  <system-err><![CDATA[abr 27, 2022 8:42:31 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 42769
+  <system-err><![CDATA[abr. 28, 2022 10:56:03 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 11167
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1651110154.752][WARNING]: This version of ChromeDriver has not been tested with Chrome version 100.
-abr 27, 2022 8:42:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-abr 27, 2022 8:42:53 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 9844
+abr. 28, 2022 10:56:04 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+abr. 28, 2022 10:56:12 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 9299
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1651110176.091][WARNING]: This version of ChromeDriver has not been tested with Chrome version 100.
-abr 27, 2022 8:42:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-abr 27, 2022 8:43:14 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 30418
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1651110197.573][WARNING]: This version of ChromeDriver has not been tested with Chrome version 100.
-abr 27, 2022 8:43:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
+abr. 28, 2022 10:56:12 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
