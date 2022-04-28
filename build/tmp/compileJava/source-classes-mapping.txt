@@ -1,0 +1,12 @@
+co/com/sofka/userinterface/login/LoginPage.java
+ co.com.sofka.userinterface.login.LoginPage
+co/com/sofka/userinterface/landingpage/LandingPage.java
+ co.com.sofka.userinterface.landingpage.LandingPage
+co/com/sofka/task/login/FillLogin.java
+ co.com.sofka.task.login.FillLogin
+co/com/sofka/task/landingpage/OpenLandingPage.java
+ co.com.sofka.task.landingpage.OpenLandingPage
+co/com/sofka/exception/ValidationTextDoNotMatch.java
+ co.com.sofka.exception.ValidationTextDoNotMatch
+co/com/sofka/question/login/Login.java
+ co.com.sofka.question.login.Login
