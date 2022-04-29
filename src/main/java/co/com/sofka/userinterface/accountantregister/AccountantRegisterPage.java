@@ -32,6 +32,9 @@ public class AccountantRegisterPage extends PageObject {
             .the("Registrar Acudiente")
             .locatedBy("//*[text()=' Registrarme como acudiente']");
 
+    public static final Target LOGOUT = Target
+            .the("LogOut")
+            .locatedBy("//*[text()= ' Cerrar sesión' ]");
 
     public static final Target WELCOME_MESSAGE = Target
             .the("Email Usuario")

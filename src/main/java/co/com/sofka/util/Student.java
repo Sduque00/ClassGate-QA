@@ -10,14 +10,44 @@ public class Student {
     private String Edad;
     private String identificacion;
     private String identificacionAcudiente;
+    private String grupo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getEdad() {
+        return Edad;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public String getIdentificacionAcudiente() {
+        return identificacionAcudiente;
+    }
+
+    public String getGrupo() {
+        return grupo;
+    }
 
     public Student(String apellido, String identificacionAcudiente)
     {
         Faker falseador = new Faker(new Locale("en_US"));
+        char letraGrupo;
+        int letra = falseador.number().numberBetween(65, 67);
+        letraGrupo = (char) letra;
         this.identificacionAcudiente = identificacionAcudiente;
         this.apellido = apellido;
         this.nombre = falseador.name().firstName();
         this.Edad = String.valueOf(falseador.number().numberBetween( 8, 16));
         this.identificacion = "10" + falseador.numerify("########");
+        this.grupo = String.valueOf(falseador.number().numberBetween(1,11)+ letraGrupo);
     }
+
 }

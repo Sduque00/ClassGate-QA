@@ -52,33 +52,21 @@ public class FillAccountantRegisterForm implements Task {
         );
         actor.attemptsTo(
 
-                //WaitUntil.the(IDENTITY, isVisible() ).forNoMoreThan(20).seconds(),
                 Scroll.to(IDENTITY),
-                //Click.on(IDENTITY),
                 Enter.theValue(identificacion).into(IDENTITY),
 
-                //WaitUntil.the(FULLNAME, isVisible() ).forNoMoreThan(20).seconds(),
                 Scroll.to(FULLNAME),
-                //Click.on(FULLNAME),
                 Enter.theValue(nombre).into(FULLNAME),
 
-                //WaitUntil.the(CELULAR, isVisible() ).forNoMoreThan(20).seconds(),
                 Scroll.to(CELULAR),
-                //Click.on(CELULAR),
                 Enter.theValue(celular).into(CELULAR),
 
-                //WaitUntil.the(ADDRESS, isVisible() ).forNoMoreThan(20).seconds(),
                 Scroll.to(ADDRESS),
-                //Click.on(ADDRESS),
                 Enter.theValue(direccion).into(ADDRESS),
 
-                //WaitUntil.the(EMAIL, isVisible() ).forNoMoreThan(20).seconds(),
                 Scroll.to(EMAIL),
-                //Click.on(EMAIL),
                 Enter.theValue(email).into(EMAIL),
 
-                //WaitUntil.the(REGISTER_ACCOUNTANT, isVisible() ).forNoMoreThan(20).seconds(),
-                //Scroll.to(REGISTER_ACCOUNTANT),
                 Click.on(REGISTER_ACCOUNTANT)
         );
     }
