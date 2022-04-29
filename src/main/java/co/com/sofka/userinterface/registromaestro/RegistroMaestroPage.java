@@ -45,6 +45,5 @@ public class RegistroMaestroPage extends PageObject {
 
     public static final Target BTN_CERRAR_SESION= Target
             .the("Btn cerrar sesion")
-            .locatedBy("id:btn-cerrar-sesion");
-
+            .located(By.xpath("//*[text()= ' Cerrar sesión' ]"));
 }

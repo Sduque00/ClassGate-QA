@@ -10,6 +10,7 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 
 import static co.com.sofka.question.login.Login.loginValidation;
+import static co.com.sofka.question.login.LoginMaestro.loginMaestroValidation;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.login.FillLogin.fillLogin;
 import static co.com.sofka.task.registromaestro.FillRegistroMaestro.fillRegistroMaestro;
@@ -21,6 +22,7 @@ public class LoginStepDefinition extends Setup {
 
     private String email = "";
     private static final String ACTOR_NAME = "User";
+    private Teacher teacher = new Teacher();
 
     @Dado("que el administrador se encuentra en la pagina")
     public void queElSeEncuentraEnLaPagina() {
@@ -52,22 +54,26 @@ public class LoginStepDefinition extends Setup {
     public void queElMaestroSeRegistroYSeEncuentraEnElInicioDeSesion() {
         theActorInTheSpotlight().wasAbleTo(
                 openLandingPage(),
-                fillRegistroMaestro()
+                fillRegistroMaestro().withData(teacher)
         );
     }
 
     @Cuando("llena el formulario y confirma la accion")
     public void llenaElFormularioYConfirmaLaAccion() {
-        Teacher teacher = null;
         theActorInTheSpotlight().attemptsTo(
                 fillLogin()
                         .usingTheUsername(teacher.getCorreo())
-                        .usingThePassword("123456789")
+                        .usingThePassword(teacher.getIdentificacion())
         );
     }
 
     @Entonces("el maestro podra ver su correo en la pagina web")
     public void elMaestroPodraVerSuCorreoEnLaPaginaWeb() {
+        email = teacher.getCorreo();
+        theActorInTheSpotlight().should(
+                seeThat(loginMaestroValidation(email), equalTo(email))
+                        .orComplainWith(ValidationTextDoNotMatch.class)
+        );
 
     }
 }

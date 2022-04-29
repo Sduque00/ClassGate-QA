@@ -1,6 +1,5 @@
 package co.com.sofka.question.login;
 
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
@@ -14,7 +13,6 @@ public class Login implements Question<String> {
     public Login(String email) {
         this.email = email;
     }
-
 
     @Override
     public String answeredBy(Actor actor) {
