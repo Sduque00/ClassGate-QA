@@ -38,7 +38,8 @@ public class LookForAccountant implements Task {
                 JavaScriptClick.on(LOOKFOR_ACCOUNTANT),
                 Enter.keyValues(nombre.substring(3,4)).into(LOOKFOR_ACCOUNTANT),
                 JavaScriptClick.on(LOOKFOR_ACCOUNTANT),
-                Enter.keyValues(nombre.substring(4,5)).into(LOOKFOR_ACCOUNTANT)
+                Enter.keyValues(nombre.substring(4,5)).into(LOOKFOR_ACCOUNTANT),
+                JavaScriptClick.on(ADD_STUDENTS)
         );
     }
 }

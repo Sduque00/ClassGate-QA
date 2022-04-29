@@ -114,9 +114,9 @@ public class AcudienteStepDefinition extends Setup {
                         .withDetails(acudiente.getHijos().get(0))
         );
 
-        theActorInTheSpotlight().attemptsTo(
+        /*theActorInTheSpotlight().attemptsTo(
                 lookForAccountantAtLast().withAccountant(acudiente)
-        );
+        );*/
         theActorInTheSpotlight().attemptsTo(
                 studentRegister()
                         .withDetails(acudiente.getHijos().get(1))

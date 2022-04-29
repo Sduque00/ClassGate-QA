@@ -10,8 +10,7 @@ import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.sofka.userinterface.accountantregister.StudentRegisterPage.ADD_STUDENTS;
-import static co.com.sofka.userinterface.accountantregister.StudentRegisterPage.LOOKFOR_ACCOUNTANT;
+import static co.com.sofka.userinterface.accountantregister.StudentRegisterPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class LookForAccountantAtLast implements Task {
@@ -32,6 +31,14 @@ public class LookForAccountantAtLast implements Task {
     public <T extends Actor> void performAs(T actor) {
         String nombre = acudiente.getNombre()+ " "+acudiente.getApellido();
         actor.attemptsTo(
+                Switch.toActiveElement(),
+                WaitUntil.the(CLOSE_SAVE_STUDENTS, isVisible() ).forNoMoreThan(30).seconds(),
+                Click.on(CLOSE_SAVE_STUDENTS),
+
+                Switch.toActiveElement(),
+                WaitUntil.the(CLEAR_LOOKFOR, isVisible() ).forNoMoreThan(30).seconds(),
+                Click.on(CLEAR_LOOKFOR),
+
                 Switch.toActiveElement(),
                 WaitUntil.the(LOOKFOR_ACCOUNTANT, isVisible() ).forNoMoreThan(30).seconds(),
                 Enter.keyValues(nombre.substring(0,1)).into(LOOKFOR_ACCOUNTANT),

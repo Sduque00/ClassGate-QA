@@ -40,9 +40,16 @@ public class StudentRegisterPage extends PageObject {
             .the("Registrar Estudiante")
             .locatedBy("//*[@id='root']/div[3]/div[2]/div[2]/div/div[2]/button");
 
+    public static final Target CLOSE_SAVE_STUDENTS = Target
+            .the("cerrar ventana guardar Estudiantes")
+            .located(xpath("*//div[contains(concat(' ', @class, ' '), 'modal-content')]/span"));
+
+
     public static final Target CLEAR_LOOKFOR = Target
             .the("Limpiar Acudientes")
-            .located(xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/div/header/button"));
+            .located(xpath("//*[@id='root']/div[4]/div[2]/div[1]/div/header/button"));
+
+
 
     public static final Target LOOKFOR_FIRSSON = Target
             .the("primer hijo")
