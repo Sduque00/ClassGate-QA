@@ -23,7 +23,6 @@ public class OpenLandingPage implements Task {
         );
     }
 
-
     public static OpenLandingPage openLandingPage(){
         return new OpenLandingPage();
     }
