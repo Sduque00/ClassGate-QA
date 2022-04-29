@@ -2,14 +2,18 @@ package co.com.sofka.stepdefinition.login;
 
 import co.com.sofka.exception.ValidationTextDoNotMatch;
 import co.com.sofka.stepdefinition.Setup;
+import co.com.sofka.task.registromaestro.FillRegistroMaestro;
+import co.com.sofka.util.Teacher;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 
 import static co.com.sofka.question.login.Login.loginValidation;
+import static co.com.sofka.question.login.LoginMaestro.loginMaestroValidation;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.login.FillLogin.fillLogin;
+import static co.com.sofka.task.registromaestro.FillRegistroMaestro.fillRegistroMaestro;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -18,8 +22,9 @@ public class LoginStepDefinition extends Setup {
 
     private String email = "";
     private static final String ACTOR_NAME = "User";
+    private Teacher teacher = new Teacher();
 
-    @Dado("que el usuario se encuentra en la pagina")
+    @Dado("que el administrador se encuentra en la pagina")
     public void queElSeEncuentraEnLaPagina() {
         actorSetupTheBrowser(ACTOR_NAME);
         theActorInTheSpotlight().wasAbleTo(
@@ -37,11 +42,38 @@ public class LoginStepDefinition extends Setup {
         );
     }
 
-    @Entonces("el usuario podra ver su correo en la pagina web")
+    @Entonces("el administrador podra ver su correo en la pagina web")
     public void elUsuarioPodraVerSuCorreoEnLaPaginaWeb() {
         theActorInTheSpotlight().should(
                 seeThat(loginValidation(email), equalTo(email))
                         .orComplainWith(ValidationTextDoNotMatch.class)
         );
+    }
+
+    @Dado("que el maestro se registro y se encuentra en el inicio de sesion")
+    public void queElMaestroSeRegistroYSeEncuentraEnElInicioDeSesion() {
+        theActorInTheSpotlight().wasAbleTo(
+                openLandingPage(),
+                fillRegistroMaestro().withData(teacher)
+        );
+    }
+
+    @Cuando("llena el formulario y confirma la accion")
+    public void llenaElFormularioYConfirmaLaAccion() {
+        theActorInTheSpotlight().attemptsTo(
+                fillLogin()
+                        .usingTheUsername(teacher.getCorreo())
+                        .usingThePassword(teacher.getIdentificacion())
+        );
+    }
+
+    @Entonces("el maestro podra ver su correo en la pagina web")
+    public void elMaestroPodraVerSuCorreoEnLaPaginaWeb() {
+        email = teacher.getCorreo();
+        theActorInTheSpotlight().should(
+                seeThat(loginMaestroValidation(email), equalTo(email))
+                        .orComplainWith(ValidationTextDoNotMatch.class)
+        );
+
     }
 }

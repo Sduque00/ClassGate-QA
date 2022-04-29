@@ -3,7 +3,8 @@ import com.github.javafaker.Faker;
 
 import java.util.*;
 
-import static com.juanmaya.utilities.Especialidades.*;
+import static co.com.sofka.util.Especialidades.*;
+
 
 public class Teacher {
     private String nombre;

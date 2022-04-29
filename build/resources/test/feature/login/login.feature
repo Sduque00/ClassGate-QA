@@ -4,16 +4,20 @@ Característica: Iniciar sesion
   Quiero ingresar a la plataforma de ClassGate
   Para validar el correcto funcionamiento
 
-  @IniciarSesion
-  Esquema del escenario: Inicio de sesion
-    Dado que el usuario se encuentra en la pagina
+  @IniciarSesionAdministrador
+  Esquema del escenario: Inicio de sesion administrador
+    Dado que el administrador se encuentra en la pagina
     Cuando inicia sesion con sus credenciales
       | username | <username> |
       | password | <password> |
-    Entonces el usuario podra ver su correo en la pagina web
+    Entonces el administrador podra ver su correo en la pagina web
     Ejemplos:
       | username                 | password  |
       | administrativo@gmail.com | 123456789 |
-      | juan.maya@gmail.com       | 1017196584 |
-      #| acudiente@gmail.com      | 123456789 |
+
+    @IniciarSesionMaestro
+    Escenario: Inicio de sesion maestro
+      Dado que el maestro se registro y se encuentra en el inicio de sesion
+      Cuando llena el formulario y confirma la accion
+      Entonces el maestro podra ver su correo en la pagina web
 
