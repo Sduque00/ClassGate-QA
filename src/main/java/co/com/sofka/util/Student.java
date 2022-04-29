@@ -39,15 +39,15 @@ public class Student {
     public Student(String apellido, String identificacionAcudiente)
     {
         Faker falseador = new Faker(new Locale("en_US"));
-        char letraGrupo;
-        int letra = falseador.number().numberBetween(65, 67);
-        letraGrupo = (char) letra;
+        String letraGrupo;
+        int letraInt = falseador.number().numberBetween( 65, 70);
+        letraGrupo = String.valueOf(Character.toChars(letraInt));
         this.identificacionAcudiente = identificacionAcudiente;
         this.apellido = apellido;
         this.nombre = falseador.name().firstName();
         this.Edad = String.valueOf(falseador.number().numberBetween( 8, 16));
         this.identificacion = "10" + falseador.numerify("########");
-        this.grupo = String.valueOf(falseador.number().numberBetween(1,11)+ letraGrupo);
+        this.grupo = String.valueOf(falseador.number().numberBetween(1,11));
     }
 
 }

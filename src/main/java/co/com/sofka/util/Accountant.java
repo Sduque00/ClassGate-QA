@@ -22,7 +22,7 @@ public class Accountant {
         correo = falseador.name().username() + "@classgate.com";
         direccion = falseador.address().streetAddress(true);
         celular = String.valueOf(falseador.number().numberBetween(300, 354)) +
-                String.valueOf(falseador.number().numberBetween(0, 9999999));
+                String.valueOf(falseador.number().numberBetween(1000000, 9999999));
         identificacion = "10" + falseador.numerify("########");
 
         hijos = new ArrayList<Student>();

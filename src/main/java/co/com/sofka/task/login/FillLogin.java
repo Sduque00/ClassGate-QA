@@ -4,6 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.sofka.userinterface.accountantregister.AccountantRegisterPage.IDENTITY;
@@ -32,10 +33,10 @@ public class FillLogin implements Task {
                 WaitUntil.the(USERNAME, isVisible() ).forNoMoreThan(30).seconds()
         );
         actor.attemptsTo(
-
+                JavaScriptClick.on(USERNAME),
                 Enter.theValue(username).into(USERNAME),
                 Enter.theValue(password).into(PASSWORD),
-                Click.on(SUBMIT)
+                JavaScriptClick.on(SUBMIT)
         );
     }
     public static FillLogin fillLogin(){

@@ -36,6 +36,25 @@ public class StudentRegisterPage extends PageObject {
             .the("Registrar Estudiante")
             .locatedBy("//*[text()= 'Agregar' ]");
 
+    public static final Target SAVE_STUDENT = Target
+            .the("Registrar Estudiante")
+            .locatedBy("//*[@id='root']/div[3]/div[2]/div[2]/div/div[2]/button");
+
+    public static final Target CLEAR_LOOKFOR = Target
+            .the("Limpiar Acudientes")
+            .located(xpath("//*[@id=\"root\"]/div[3]/div[2]/div[1]/div/header/button"));
+
+    public static final Target LOOKFOR_FIRSSON = Target
+            .the("primer hijo")
+            .locatedBy("//*[text()='{0}']");
+
+    public static final Target LOOKFOR_SECONDSON = Target
+            .the("segundo hijo")
+            .locatedBy("//*[text()='{0}']");
+
+    public static final Target LOOKFOR_THIRDSON = Target
+            .the("tercer hijo")
+            .locatedBy("//*[text()='{0}']");
 
 }
 
