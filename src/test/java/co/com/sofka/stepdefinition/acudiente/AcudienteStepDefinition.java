@@ -15,6 +15,7 @@ import io.cucumber.java.es.Entonces;
 
 import static co.com.sofka.question.acudiente.AcudienteQuestion.acudienteQuestion;
 import static co.com.sofka.question.acudiente.RegisteredAccounts.registeredAccounts;
+import static co.com.sofka.question.login.Login.loginValidation;
 import static co.com.sofka.task.acudiente.BrowseToAccountantRegister.browseToAccountantRegister;
 import static co.com.sofka.task.acudiente.FillAccountantRegisterForm.fillAccountantRegisterForm;
 import static co.com.sofka.task.acudiente.LogoutAccountant.logoutAccountant;
@@ -114,9 +115,6 @@ public class AcudienteStepDefinition extends Setup {
                         .withDetails(acudiente.getHijos().get(0))
         );
 
-        /*theActorInTheSpotlight().attemptsTo(
-                lookForAccountantAtLast().withAccountant(acudiente)
-        );*/
         theActorInTheSpotlight().attemptsTo(
                 studentRegister()
                         .withDetails(acudiente.getHijos().get(1))
@@ -147,6 +145,48 @@ public class AcudienteStepDefinition extends Setup {
         );
 
     }
+
+
+    @Dado("Que soy un acudiente y deseo ingresar en la plataforma")
+    public void queSoyUnAcudienteYDeseoIngresarEnLaPlataforma() {
+        actorSetupTheBrowser(ACTOR_NAME);
+        theActorInTheSpotlight().wasAbleTo(
+                openLandingPage()
+        );
+    }
+
+    @Cuando("selecciono el formulario de registro e ingreso mis datos personales")
+    public void seleccionoElFormularioDeRegistroEIngresoMisDatosPersonales() {
+        theActorInTheSpotlight().attemptsTo(
+                browseToAccountantRegister()
+        );
+        theActorInTheSpotlight().attemptsTo(
+
+                fillAccountantRegisterForm()
+                        .withId(acudiente.getIdentificacion())
+                        .andName(acudiente.getNombre() + " " +acudiente.getApellido())
+                        .andAddress(acudiente.getDireccion())
+                        .andEmail(acudiente.getCorreo())
+                        .andCellphone(acudiente.getCelular()),
+                logoutAccountant()
+        );
+
+    }
+
+    @Entonces("la institucion me asigna una cuenta y hago login en la pagina")
+    public void laInstitucionMeAsignaUnaCuentaYHagoLoginEnLaPagina() {
+
+        theActorInTheSpotlight().attemptsTo(
+                fillLogin()
+                        .usingTheUsername(acudiente.getCorreo())
+                        .usingThePassword(acudiente.getIdentificacion())
+        );
+        theActorInTheSpotlight().should(
+                seeThat(loginValidation(acudiente.getCorreo()), equalTo(acudiente.getCorreo()))
+                        .orComplainWith(ValidationTextDoNotMatch.class)
+        );
+    }
+
 
 
 }
