@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Dado que soy Acudiente" skipped="0" tests="2" time="40.25" timestamp="2022-04-29 11:19:21"><testcase name="Registro de Acudiente"/><testcase name="Inscripcion de estudiantes"><error message="element click intercepted: Element &lt;button&gt;...&lt;/button&gt; is not clickable at point (3263, 50). Other element would receive the click: &lt;div class=&quot;loading-page&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=101.0.4951.41)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'juan-Forward-Unto-Dawn', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.ZAIuwZ}, goog:chromeOptions: {debuggerAddress: localhost:45733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b09093893961034c8c6739a9a7d9fb3c" type="org.openqa.selenium.ElementClickInterceptedException">element click intercepted: Element &lt;button&gt;...&lt;/button&gt; is not clickable at point (3263, 50). Other element would receive the click: &lt;div class="loading-page"&gt;...&lt;/div&gt;
+  (Session info: chrome=101.0.4951.41)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'juan-Forward-Unto-Dawn', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.ZAIuwZ}, goog:chromeOptions: {debuggerAddress: localhost:45733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b09093893961034c8c6739a9a7d9fb3c</error><system-err>element click intercepted: Element &lt;button&gt;...&lt;/button&gt; is not clickable at point (3263, 50). Other element would receive the click: &lt;div class="loading-page"&gt;...&lt;/div&gt;
+  (Session info: chrome=101.0.4951.41)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'juan-Forward-Unto-Dawn', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.ZAIuwZ}, goog:chromeOptions: {debuggerAddress: localhost:45733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b09093893961034c8c6739a9a7d9fb3c
+co.com.sofka.task.acudiente.LogoutAccountant.performAs(LogoutAccountant.java:21)
+co.com.sofka.stepdefinition.acudiente.AcudienteStepDefinition.ingresoALaPlataformaYSeleccionoLaOpcionDeRegistroDeEstudianteYRellenoElFormulario(AcudienteStepDefinition.java:99)
+io.cucumber.java.Invoker.invoke(Invoker.java:27)
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)
+</system-err></testcase></testsuite>

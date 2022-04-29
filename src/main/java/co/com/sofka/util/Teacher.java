@@ -5,7 +5,6 @@ import java.util.*;
 
 import static co.com.sofka.util.Especialidades.*;
 
-
 public class Teacher {
     private String nombre;
     private String apellido;
@@ -27,7 +26,7 @@ public class Teacher {
         correo = falseador.name().username() + "@classgate.com";
         direccion = falseador.address().streetAddress(true);
         celular = String.valueOf( falseador.number().numberBetween(300, 354)) +
-                String.valueOf( falseador.number().numberBetween(0, 9999999)) ;
+                String.valueOf( falseador.number().numberBetween(1000000, 9999999));
         listaEspecialidades = especialidadAleatoria();
         especialidad = listaEspecialidades.get(0);
         identificacion = "10"+falseador.numerify("########");

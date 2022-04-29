@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1018648476be08e8069c9987624d80fa86367b95ee8153e997dfeb2b624993ec.html">Dado Que Soy Acudiente</a></span>
+                > <span class="truncate-60"><a
+                    href="28d1e2eee6d2af7da26754c9d06fe0e692ee5cda1d41ceb10be9b7bc425c174a.html">Inscripcion de estudiantes </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-04-2022 12:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Dado Que Soy Acudiente</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Cuando quiero registrarme en la plataforma
+Entonces selecciono el formulario de registro e ingreso los datos requeridos: Nombre Acudiente*, Correo*, Dirección*, Celular*
+Entonces la institución ya puede inscribir al estudiante.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Inscripcion de estudiantes
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f32ee46b3bb2e8e49eb55dab1bf911f65acec5bab15eb4921ab2623ddefd11db.png" title=" Dado Que soy un administrativo y quiero ingresar los estudiantes de un acudiente registrado en la institucion" width="3376"/>
+                <img src="f32ee46b3bb2e8e49eb55dab1bf911f65acec5bab15eb4921ab2623ddefd11db.png" title=" John open landing page" width="3376"/>
+                <img src="f32ee46b3bb2e8e49eb55dab1bf911f65acec5bab15eb4921ab2623ddefd11db.png" title=" john opens the Landing page" width="3376"/>
+                <img src="76b957f89b3bdffa8fcf5ae2ef676d8353df45a0133a92fd34657f44222dee97.png" title=" john opens the Landing page (completed)" width="3376"/>
+                <img src="c02a5ee8f2d5b5cb382574ad0cba46cfa95dc1fcc8032eb345a97abd026422d2.png" title=" john clicks on btn_ingresar" width="3376"/>
+                <img src="301d31f6c62748bec5107d49be20923ee3680b2576d57e1788cf05574617f54e.png" title=" john clicks on btn_ingresar (completed)" width="3376"/>
+                <img src="301d31f6c62748bec5107d49be20923ee3680b2576d57e1788cf05574617f54e.png" title=" John open landing page (completed)" width="3376"/>
+                <img src="301d31f6c62748bec5107d49be20923ee3680b2576d57e1788cf05574617f54e.png" title=" Dado Que soy un administrativo y quiero ingresar los estudiantes de un acudiente registrado en la institucion (completed)" width="3376"/>
+                <img src="908aa0b1550e6e25a42dbe8e2e1cbbe109c7eaad17da60c6296f983262339b03.png" title=" Cuando Ingreso a la plataforma y selecciono la opcion de registro de estudiante y relleno el formulario" width="3376"/>
+                <img src="908aa0b1550e6e25a42dbe8e2e1cbbe109c7eaad17da60c6296f983262339b03.png" title=" John browse to accountant register" width="3376"/>
+                <img src="908aa0b1550e6e25a42dbe8e2e1cbbe109c7eaad17da60c6296f983262339b03.png" title=" john clicks on RegistroAcudiente" width="3376"/>
+                <img src="f88ac226ba0b229d1800ce9d3b4bbfd19cb725987cc9dc003c011f9850f5f49f.png" title=" john clicks on RegistroAcudiente (completed)" width="3376"/>
+                <img src="f88ac226ba0b229d1800ce9d3b4bbfd19cb725987cc9dc003c011f9850f5f49f.png" title=" John browse to accountant register (completed)" width="3376"/>
+                <img src="f88ac226ba0b229d1800ce9d3b4bbfd19cb725987cc9dc003c011f9850f5f49f.png" title=" John fill accountant register form" width="3376"/>
+                <img src="d05ca6d330dbba4587403eaf40d48b988aca24ba9320930daf91d1518f9c35e2.png" title=" john enters '1024799080' into id" width="3376"/>
+                <img src="d91c8f190a5c489c54965106ca6f18050b603548a10281719900cb1de4b6794a.png" title=" john enters '1024799080' into id (completed)" width="3376"/>
+                <img src="016b7e697d996246c7c460252562db9e41c5c9b9c097905457eb45992e37d2b6.png" title=" john enters 'Alonso Shanahan' into Nombre Acudiente" width="3376"/>
+                <img src="92fa5c7d66312a856e071d695e2ccb3231f0de7265268241b3641f24320ecedc.png" title=" john enters 'Alonso Shanahan' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="92fa5c7d66312a856e071d695e2ccb3231f0de7265268241b3641f24320ecedc.png" title=" john enters '3255665661' into Celular" width="3376"/>
+                <img src="73744f9ffaa93a6b5cadea6a5ffe723ce1c121e6dd3abc72c8185d4e0e333049.png" title=" john enters '3255665661' into Celular (completed)" width="3376"/>
+                <img src="73744f9ffaa93a6b5cadea6a5ffe723ce1c121e6dd3abc72c8185d4e0e333049.png" title=" john enters '617 Waters Tunnel Apt. 066' into Direccion" width="3376"/>
+                <img src="e62e7b1a5d076d6c13f27a53c2a4d25813940adc02b6616d15ca98e68f301811.png" title=" john enters '617 Waters Tunnel Apt. 066' into Direccion (completed)" width="3376"/>
+                <img src="e62e7b1a5d076d6c13f27a53c2a4d25813940adc02b6616d15ca98e68f301811.png" title=" john enters 'reyes.jaskolski@classgate.com' into Correo Electronico" width="3376"/>
+                <img src="69957a0a2ac62c01cf19ccc7bb291a7549fec0430950e3f7d2c83861f69b6d4d.png" title=" john enters 'reyes.jaskolski@classgate.com' into Correo Electronico (completed)" width="3376"/>
+                <img src="69957a0a2ac62c01cf19ccc7bb291a7549fec0430950e3f7d2c83861f69b6d4d.png" title=" john clicks on Registrar Acudiente" width="3376"/>
+                <img src="218a56fdf71e2b8a7b0e6c366534d8bcaf0e425c5452649d4da7ba07291e6338.png" title=" john clicks on Registrar Acudiente (completed)" width="3376"/>
+                <img src="218a56fdf71e2b8a7b0e6c366534d8bcaf0e425c5452649d4da7ba07291e6338.png" title=" John fill accountant register form (completed)" width="3376"/>
+                <img src="218a56fdf71e2b8a7b0e6c366534d8bcaf0e425c5452649d4da7ba07291e6338.png" title=" John logout accountant" width="3376"/>
+                <img src="15bbf4e980885d6d586f8ad0833403964d44ac9a5b677e8a9120a3d9876918f0.png" title=" john clicks on LogOut" width="3376"/>
+                <img src="a0dde895ab83bb2f96de99f6776cdbf3256800b1bbf1096684963658c93f95e7.png" title=" john clicks on LogOut (completed)" width="3376"/>
+                <img src="a0dde895ab83bb2f96de99f6776cdbf3256800b1bbf1096684963658c93f95e7.png" title=" John logout accountant (completed)" width="3376"/>
+                <img src="a0dde895ab83bb2f96de99f6776cdbf3256800b1bbf1096684963658c93f95e7.png" title=" John fill login" width="3376"/>
+                <img src="a6f76cbb453116e9378079322338f74d33f2664ac2e2e426ec34290f3da6064d.png" title=" john clicks on UserName" width="3376"/>
+                <img src="d96bc5754903060efbc155e59e9510448cbb4cea6df12891cba4bd12985aa3ed.png" title=" john clicks on UserName (completed)" width="3376"/>
+                <img src="d96bc5754903060efbc155e59e9510448cbb4cea6df12891cba4bd12985aa3ed.png" title=" john enters 'administrativo@gmail.com' into UserName" width="3376"/>
+                <img src="b234bc539cdab1f3026a659f6c70db183e62ede309fe684c85babf047d09a433.png" title=" john enters 'administrativo@gmail.com' into UserName (completed)" width="3376"/>
+                <img src="b234bc539cdab1f3026a659f6c70db183e62ede309fe684c85babf047d09a433.png" title=" john enters '123456789' into Password" width="3376"/>
+                <img src="2a31a16ca1777876a3ba338debadfb1daca7a11bacfae1c4d4e103f63d61e5bd.png" title=" john enters '123456789' into Password (completed)" width="3376"/>
+                <img src="2a31a16ca1777876a3ba338debadfb1daca7a11bacfae1c4d4e103f63d61e5bd.png" title=" john clicks on Submit" width="3376"/>
+                <img src="c98527fb1cfcb8da1ed68f3fa9f5bd7cc8cd880099f26b66d4490443c22a4a2e.png" title=" john clicks on Submit (completed)" width="3376"/>
+                <img src="c98527fb1cfcb8da1ed68f3fa9f5bd7cc8cd880099f26b66d4490443c22a4a2e.png" title=" John fill login (completed)" width="3376"/>
+                <img src="c98527fb1cfcb8da1ed68f3fa9f5bd7cc8cd880099f26b66d4490443c22a4a2e.png" title=" John look for accountant" width="3376"/>
+                <img src="6597733ea43f7a0c6896c1b12a2c011b9297dd87690f0e8f197defd0212d072c.png" title=" john enters 'A' into Nombre Acudiente" width="3376"/>
+                <img src="d6b29e42eb9227aebe842efde2bafe2b7e582bb10665e65bc0f86797a478b66c.png" title=" john enters 'A' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="d6b29e42eb9227aebe842efde2bafe2b7e582bb10665e65bc0f86797a478b66c.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="923380f58a14ccc9ac96a30ddb7c6cc38b2b7b123ac902234143d79de8fb995e.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="923380f58a14ccc9ac96a30ddb7c6cc38b2b7b123ac902234143d79de8fb995e.png" title=" john enters 'l' into Nombre Acudiente" width="3376"/>
+                <img src="c685c4d9032c10f3daf826eca461c96ffca815f805a8800dd4647d9211e5e776.png" title=" john enters 'l' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="c685c4d9032c10f3daf826eca461c96ffca815f805a8800dd4647d9211e5e776.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="dd768f4fee477f4957e38e35d5f6ff1d3750a5314ac07424d727a9d3013452f6.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="dd768f4fee477f4957e38e35d5f6ff1d3750a5314ac07424d727a9d3013452f6.png" title=" john enters 'o' into Nombre Acudiente" width="3376"/>
+                <img src="79310f8f9fa700f2265eb69c0d7cbbf90df900ccf82ee7147c6775d258d15e7d.png" title=" john enters 'o' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="79310f8f9fa700f2265eb69c0d7cbbf90df900ccf82ee7147c6775d258d15e7d.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="79310f8f9fa700f2265eb69c0d7cbbf90df900ccf82ee7147c6775d258d15e7d.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="79310f8f9fa700f2265eb69c0d7cbbf90df900ccf82ee7147c6775d258d15e7d.png" title=" john enters 'n' into Nombre Acudiente" width="3376"/>
+                <img src="9bb5ca83dd6acaa5a2c475b169340651551ca0480ba06bd40a90f5a013d2fe08.png" title=" john enters 'n' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="9bb5ca83dd6acaa5a2c475b169340651551ca0480ba06bd40a90f5a013d2fe08.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="9bb5ca83dd6acaa5a2c475b169340651551ca0480ba06bd40a90f5a013d2fe08.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="9bb5ca83dd6acaa5a2c475b169340651551ca0480ba06bd40a90f5a013d2fe08.png" title=" john enters 's' into Nombre Acudiente" width="3376"/>
+                <img src="6a2510e718d8304c5132a6215c949040976f5ddc5cebe079860f6a561548423b.png" title=" john enters 's' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="6a2510e718d8304c5132a6215c949040976f5ddc5cebe079860f6a561548423b.png" title=" john clicks on Anadir Estudiantes" width="3376"/>
+                <img src="29f3dd403b9bb425b711d2109b920d6aedfd2ac93770eb004531cd71172fe98e.png" title=" john clicks on Anadir Estudiantes (completed)" width="3376"/>
+                <img src="29f3dd403b9bb425b711d2109b920d6aedfd2ac93770eb004531cd71172fe98e.png" title=" John look for accountant (completed)" width="3376"/>
+                <img src="29f3dd403b9bb425b711d2109b920d6aedfd2ac93770eb004531cd71172fe98e.png" title=" John student register" width="3376"/>
+                <img src="29f3dd403b9bb425b711d2109b920d6aedfd2ac93770eb004531cd71172fe98e.png" title=" john enters '1082885231' into Identificacion Estudiante" width="3376"/>
+                <img src="b44107c7426b326c1cbd7740900110410e4aea0bd97b21ae982269b8d5117074.png" title=" john enters '1082885231' into Identificacion Estudiante (completed)" width="3376"/>
+                <img src="b44107c7426b326c1cbd7740900110410e4aea0bd97b21ae982269b8d5117074.png" title=" john enters 'Viola Shanahan' into Nombre Estudiante" width="3376"/>
+                <img src="0f0162412302a13dc2cd60de1144042b02351696bdf5fa17a50582124b603401.png" title=" john enters 'Viola Shanahan' into Nombre Estudiante (completed)" width="3376"/>
+                <img src="0f0162412302a13dc2cd60de1144042b02351696bdf5fa17a50582124b603401.png" title=" john enters '4' into Grupo Estudiante" width="3376"/>
+                <img src="dea1ba87592f17b517059cec7c6b245092296771327139618ab262401a0853dd.png" title=" john enters '4' into Grupo Estudiante (completed)" width="3376"/>
+                <img src="dea1ba87592f17b517059cec7c6b245092296771327139618ab262401a0853dd.png" title=" john enters '12' into Edad Estudiante" width="3376"/>
+                <img src="b501fbb56fa57220061b2b77491ae53abfa9c2c8f41e7eb2f9574014b4901ad5.png" title=" john enters '12' into Edad Estudiante (completed)" width="3376"/>
+                <img src="b501fbb56fa57220061b2b77491ae53abfa9c2c8f41e7eb2f9574014b4901ad5.png" title=" john clicks on Registrar Estudiante" width="3376"/>
+                <img src="7aae1e1767c37b2df9d151cb9368aa86b4a47510f3b413eafa500280744840ab.png" title=" john clicks on Registrar Estudiante (completed)" width="3376"/>
+                <img src="7aae1e1767c37b2df9d151cb9368aa86b4a47510f3b413eafa500280744840ab.png" title=" John student register (completed)" width="3376"/>
+                <img src="7aae1e1767c37b2df9d151cb9368aa86b4a47510f3b413eafa500280744840ab.png" title=" John student register" width="3376"/>
+                <img src="7aae1e1767c37b2df9d151cb9368aa86b4a47510f3b413eafa500280744840ab.png" title=" john enters '1097822680' into Identificacion Estudiante" width="3376"/>
+                <img src="14226d1bf721ed55c9429424238de8c3f151f29cc71d9ccbe4903b7953f96a46.png" title=" john enters '1097822680' into Identificacion Estudiante (completed)" width="3376"/>
+                <img src="14226d1bf721ed55c9429424238de8c3f151f29cc71d9ccbe4903b7953f96a46.png" title=" john enters 'Frida Shanahan' into Nombre Estudiante" width="3376"/>
+                <img src="a96341f2a97381931b5784f20d6e3641ae55c10c10ffe7c16732bbcdc33e8d8f.png" title=" john enters 'Frida Shanahan' into Nombre Estudiante (completed)" width="3376"/>
+                <img src="a96341f2a97381931b5784f20d6e3641ae55c10c10ffe7c16732bbcdc33e8d8f.png" title=" john enters '8' into Grupo Estudiante" width="3376"/>
+                <img src="99a8c6d1f0192bce32e416b1e79a9d0621ca86de8a5ddee248b8ce40bed014ae.png" title=" john enters '8' into Grupo Estudiante (completed)" width="3376"/>
+                <img src="99a8c6d1f0192bce32e416b1e79a9d0621ca86de8a5ddee248b8ce40bed014ae.png" title=" john enters '14' into Edad Estudiante" width="3376"/>
+                <img src="1d9b06d6f8f00a42bae9b850453f8daae0971b5a4720267b7b2e4ddfd26c2548.png" title=" john enters '14' into Edad Estudiante (completed)" width="3376"/>
+                <img src="1d9b06d6f8f00a42bae9b850453f8daae0971b5a4720267b7b2e4ddfd26c2548.png" title=" john clicks on Registrar Estudiante" width="3376"/>
+                <img src="b90d52cecf23558fd86da462450e6ee28238732c5eeeea87a0d55d07dff060ac.png" title=" john clicks on Registrar Estudiante (completed)" width="3376"/>
+                <img src="b90d52cecf23558fd86da462450e6ee28238732c5eeeea87a0d55d07dff060ac.png" title=" John student register (completed)" width="3376"/>
+                <img src="b90d52cecf23558fd86da462450e6ee28238732c5eeeea87a0d55d07dff060ac.png" title=" Cuando Ingreso a la plataforma y selecciono la opcion de registro de estudiante y relleno el formulario (completed)" width="3376"/>
+                <img src="f39adc3aef933594da71ab28ad16da3174290e7a21ba091d3da66d80485a7e8d.png" title=" Entonces la institucion registra a los estudiantes exitosamente" width="3376"/>
+                <img src="f39adc3aef933594da71ab28ad16da3174290e7a21ba091d3da66d80485a7e8d.png" title=" John look for accountant at last" width="3376"/>
+                <img src="f39adc3aef933594da71ab28ad16da3174290e7a21ba091d3da66d80485a7e8d.png" title=" john clicks on cerrar ventana guardar Estudiantes" width="3376"/>
+                <img src="31f7f1e1d157e994e45d7c4e92a70a8ad080252b3541d9211722557caab5aae0.png" title=" john clicks on cerrar ventana guardar Estudiantes (completed)" width="3376"/>
+                <img src="31f7f1e1d157e994e45d7c4e92a70a8ad080252b3541d9211722557caab5aae0.png" title=" john clicks on Limpiar Acudientes" width="3376"/>
+                <img src="6d28841885da9bd345499c6bdd97cd47154d5b9d1e3c0a94b5bc8e5bb9b12e5d.png" title=" john clicks on Limpiar Acudientes (completed)" width="3376"/>
+                <img src="9a85d32489bbd4d656460826e4f38be84381e360a61753149e8b9045220bd4f8.png" title=" john enters 'A' into Nombre Acudiente" width="3376"/>
+                <img src="576b621ea4a4fb2b3cfcd726354010314daf5155a19af9247e08b0567903f8a1.png" title=" john enters 'A' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="576b621ea4a4fb2b3cfcd726354010314daf5155a19af9247e08b0567903f8a1.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="3c1bd86b4fd1b1f98bd4b4fc74e5d165f186d79dac5411e7778431ba28669979.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="3c1bd86b4fd1b1f98bd4b4fc74e5d165f186d79dac5411e7778431ba28669979.png" title=" john enters 'l' into Nombre Acudiente" width="3376"/>
+                <img src="2824cbd02c5cc8ddbd75675f66ddaae9eb1f343577b7f0fac4a95158cf27afc7.png" title=" john enters 'l' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="2824cbd02c5cc8ddbd75675f66ddaae9eb1f343577b7f0fac4a95158cf27afc7.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="58a1aac8467f52b58e691fc4bc40b5c0b5e714280a8569b984ace15ccd9bedd6.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="58a1aac8467f52b58e691fc4bc40b5c0b5e714280a8569b984ace15ccd9bedd6.png" title=" john enters 'o' into Nombre Acudiente" width="3376"/>
+                <img src="70396462a005ccabc8d29162b1c6461f93f556c3f71b53a295c766156da82c66.png" title=" john enters 'o' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="70396462a005ccabc8d29162b1c6461f93f556c3f71b53a295c766156da82c66.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="5b96aa82b9ecc5e9780fb87a23b05c0d0d5e3631460ec6c7fd3411a50a92abda.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="5b96aa82b9ecc5e9780fb87a23b05c0d0d5e3631460ec6c7fd3411a50a92abda.png" title=" john enters 'n' into Nombre Acudiente" width="3376"/>
+                <img src="3d94ba1aded13ca48ee225f3ce329923a8c5964eb119dd80683cd4ebcb7e95d2.png" title=" john enters 'n' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="3d94ba1aded13ca48ee225f3ce329923a8c5964eb119dd80683cd4ebcb7e95d2.png" title=" john clicks on Nombre Acudiente" width="3376"/>
+                <img src="639c691182b1ffe6c4c92e5b7855e2699372f23b1bf95364242b54bc7b6b4a5d.png" title=" john clicks on Nombre Acudiente (completed)" width="3376"/>
+                <img src="639c691182b1ffe6c4c92e5b7855e2699372f23b1bf95364242b54bc7b6b4a5d.png" title=" john enters 's' into Nombre Acudiente" width="3376"/>
+                <img src="590c425238c85affc5061bbf7bc0a74f7679695c51894e23f8a4c4af0870b0a2.png" title=" john enters 's' into Nombre Acudiente (completed)" width="3376"/>
+                <img src="590c425238c85affc5061bbf7bc0a74f7679695c51894e23f8a4c4af0870b0a2.png" title=" john clicks on Anadir Estudiantes" width="3376"/>
+                <img src="e7873dce859621b313d71bf4a00ff772150e623abff40adb368d585ca33b37ce.png" title=" john clicks on Anadir Estudiantes (completed)" width="3376"/>
+                <img src="e7873dce859621b313d71bf4a00ff772150e623abff40adb368d585ca33b37ce.png" title=" John look for accountant at last (completed)" width="3376"/>
+                <img src="e7873dce859621b313d71bf4a00ff772150e623abff40adb368d585ca33b37ce.png" title=" Then registered accounts should be 'Viola Shanahan Frida Shanahan'" width="3376"/>
+                <img src="af79e19e303903f448f2e1c8dc5f5b17ebd6e63d6d1b4963087b65dc1ce32c00.png" title=" Then registered accounts should be 'Viola Shanahan Frida Shanahan' (completed)" width="3376"/>
+                <img src="af79e19e303903f448f2e1c8dc5f5b17ebd6e63d6d1b4963087b65dc1ce32c00.png" title=" Entonces la institucion registra a los estudiantes exitosamente (completed): <span class='success-color'>SUCCESS</span>" width="3376"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

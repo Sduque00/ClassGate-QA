@@ -19,7 +19,7 @@ public class FillRegistroMaestro implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BTN_RegistroMaestro),
+                JavaScriptClick.on(BTN_RegistroMaestro),
                 Enter.theValue(teacher.getCorreo()).into(EMAIL),
                 Enter.theValue(teacher.getDireccion()).into(DIRECCION),
                 Enter.theValue(teacher.getIdentificacion()).into(CONTRASEÑA),
@@ -29,10 +29,12 @@ public class FillRegistroMaestro implements Task {
                 Enter.theValue(teacher.getIdentificacion()).into(DOCUMENTO)
         );
         actor.attemptsTo(
-                Click.on(BTN_SUBMIT)
+                JavaScriptClick.on(BTN_SUBMIT)
         );
         actor.attemptsTo(
-                JavaScriptClick.on(BTN_CERRAR_SESION));
+                JavaScriptClick.on(BTN_CERRAR_SESION)
+        );
+
     }
 
     public static FillRegistroMaestro fillRegistroMaestro(){
