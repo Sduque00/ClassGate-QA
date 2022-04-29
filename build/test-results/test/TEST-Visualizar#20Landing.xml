@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Visualizar Landing" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-29T19:57:59" hostname="DESKTOP-90O2SEU" time="27.292">
+  <properties/>
+  <testcase name="Visualizar landing" classname="Visualizar Landing" time="18.734"/>
+  <testcase name="Muestra del software" classname="Visualizar Landing" time="8.558"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[abr 29, 2022 2:57:59 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 19850
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+abr 29, 2022 2:58:10 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+abr 29, 2022 2:58:17 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 19594
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+abr 29, 2022 2:58:21 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>
