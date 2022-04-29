@@ -2,11 +2,23 @@ co/com/sofka/userinterface/login/LoginPage.java
  co.com.sofka.userinterface.login.LoginPage
 co/com/sofka/question/login/Login.java
  co.com.sofka.question.login.Login
+co/com/sofka/util/Teacher.java
+ co.com.sofka.util.Teacher
 co/com/sofka/task/login/FillLogin.java
  co.com.sofka.task.login.FillLogin
 co/com/sofka/task/landingpage/OpenLandingPage.java
  co.com.sofka.task.landingpage.OpenLandingPage
+co/com/sofka/question/login/LoginMaestro.java
+ co.com.sofka.question.login.LoginMaestro
 co/com/sofka/exception/ValidationTextDoNotMatch.java
  co.com.sofka.exception.ValidationTextDoNotMatch
+co/com/sofka/util/Accountant.java
+ co.com.sofka.util.Accountant
+co/com/sofka/util/Especialidades.java
+ co.com.sofka.util.Especialidades
 co/com/sofka/userinterface/landingpage/LandingPage.java
  co.com.sofka.userinterface.landingpage.LandingPage
+co/com/sofka/task/registromaestro/FillRegistroMaestro.java
+ co.com.sofka.task.registromaestro.FillRegistroMaestro
+co/com/sofka/userinterface/registromaestro/RegistroMaestroPage.java
+ co.com.sofka.userinterface.registromaestro.RegistroMaestroPage
